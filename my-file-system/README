@@ -1,0 +1,25 @@
+FAT-12 File System Project
+
+Files
+
+    DirectoryEntry.h and DirectoryEntry.cpp: Manage the properties and operations of directory entries.
+    FAT12.h and FAT12.cpp: Handle the File Allocation Table (FAT) operations.
+    FileSystem.h and FileSystem.cpp: Core file system operations, including creating, deleting, reading, and writing files and directories.
+    makeFileSystem.cpp: Creates a new file system.
+    fileSystemOper.cpp: Performs operations on the file system.
+
+Running the Program
+
+    Create a File System: Block size is defines as 1. The file system name is fileSystem.data. They can be changed in.
+
+        ./makeFileSystem 1 fileSystem.data
+
+    Perform Operations: Here are some examples of operations that can be performed on the file system:
+
+        ./fileSystemOper fileSystem.data mkdir "/usr"
+        ./fileSystemOper fileSystem.data writeDirect "/usr/ysa/lf" "lf content"
+        ./fileSystemOper fileSystem.data dir "/"
+
+    Test Script: This script builds the clean file system, performs all the operations, and then deletes the file system.
+
+        ./test_script.sh
